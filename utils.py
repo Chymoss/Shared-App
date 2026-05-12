@@ -1,12 +1,16 @@
 
 # deepseek用法
-from langchain_deepseek import ChatDeepSeek
+from langchain_openai import ChatOpenAI
 #model = ChatDeepSeek(model="deepseek-chat", api_key=os.environ.get('DEEPSEEK_API_KEY'))
 from langchain_core.messages import HumanMessage
 
 
-def generate(API_key, character,style):
-    model = ChatDeepSeek(model="deepseek-chat", api_key=API_key)
+def generate(api_key, character,style):
+    model = ChatOpenAI(
+        model="deepseek-chat",
+        api_key=api_key,
+        base_url="https://api.deepseek.com"
+    )
     prompt = f"""
     请围绕街霸6游戏人物“{character}”
     生成一段150词以内的视频脚本，展示{style}操作模式下该角色基本连段和实战思路。
