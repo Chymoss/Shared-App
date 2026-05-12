@@ -9,7 +9,8 @@ def generate(api_key, character,style):
     model = ChatOpenAI(
         model="deepseek-chat",
         api_key=api_key,
-        base_url="https://api.deepseek.com"
+        base_url="https://api.deepseek.com",
+        temperature=0.7
     )
     prompt = f"""
     请围绕街霸6游戏人物“{character}”
