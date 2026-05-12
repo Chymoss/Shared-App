@@ -1,5 +1,4 @@
-from langchain.chat_models import init_chat_model
-import os
+
 # deepseek用法
 from langchain_deepseek import ChatDeepSeek
 #model = ChatDeepSeek(model="deepseek-chat", api_key=os.environ.get('DEEPSEEK_API_KEY'))
